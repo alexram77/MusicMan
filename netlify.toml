@@ -1,0 +1,9 @@
+[build]
+  base = "letsmakemusic.netlify.app"
+  publish = "letsmakemusic.netlify.app"
+
+[[redirects]]
+  from = "/*"
+  to = "/letsmakemusic.netlify.app/:splat"
+  status = 200
+  force = true
