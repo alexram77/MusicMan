@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spotify Authorization</title>
+  </head>
+  <body>
+    <h1>Authorize Spotify</h1>
+    <p>Click the button below to authorize this app to access your Spotify account:</p>
+    <button onclick="authorize()">Authorize</button>
+    <script>
+      function authorize() {
+        const clientId = 'YOUR_CLIENT_ID';
+        const redirectUri = 'http://localhost:8000/callback';
+        const scope = 'playlist-read-private';
+        const url = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=code&redirect_uri=${encodeURIComponent(redirectUri)}&scope=${encodeURIComponent(scope)}`;
+        window.location.href = url;
+      }
+    </script>
+  </body>
+</html>
