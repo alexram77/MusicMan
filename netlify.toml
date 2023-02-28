@@ -1,6 +1,8 @@
 #[build]
 #  base = "letsmakemusic.netlify.app"
+  base = ""
 #  publish = "build-output"
+  publish = ""
 
 #[[redirects]]
 #  from = "/*"
